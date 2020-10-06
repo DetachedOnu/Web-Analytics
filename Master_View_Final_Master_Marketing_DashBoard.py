@@ -1,22 +1,3 @@
-#!/usr/bin/env pythn
-# coding: utf-8
-
-# In[ ]:
-
-
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[36]:
-
-
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[40]:
-
-
-#Simple python script for creating a table in postgreSQL
 
 import pandas as pd
 from pandas import DataFrame
@@ -32,12 +13,17 @@ import psycopg2
 from oauth2client.service_account import ServiceAccountCredentials
 
 #os.chdir(r"C:\Users\Admin\Desktop\My Tree\BackUp_Data")
+user_ = input("User name :")
+password_ = input("password :")
+port_ = input("Port : ")
+database_ = input("Database :")
+host_ = input("Host name: ")
 
-conn2 = psycopg2.connect(user = "workindiauserread",
-                         password = "EBkaGnz2xGn5kQHk",
-                         host = "workindia-redshift-cluster-v2.c4n7phkfcstn.us-east-1.redshift.amazonaws.com",
-                         port = "5439",
-                         database = "workindia"
+conn2_ = psycopg2.connect(user = user_, 
+                         password = password_,
+                         host = host_,
+                         port = port_,
+                         database = databse_
                         )
 x1 = conn2.cursor()
 
@@ -421,22 +407,4 @@ os.remove("Output_Final_MMDB.csv")
 print(today)
 print("Data Pasted")
 print("<-------------------End--------------->")
-
-
-# In[ ]:
-
-
-
-
-
-# In[32]:
-
-
-
-
-
-# In[34]:
-
-
-
 
