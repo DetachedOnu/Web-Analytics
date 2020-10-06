@@ -26,12 +26,17 @@ import psycopg2
 from oauth2client.service_account import ServiceAccountCredentials
 
 os.chdir(r"C:\Users\Admin\Desktop\My Tree\BackUp_Data")
+user_ = input("User name :")
+password_ = input("password :")
+port_ = input("Port : ")
+database_ = input("Database :")
+host_ = input("Host name: ")
 
-conn2 = psycopg2.connect(user = "workindiauserread",
-                         password = "x6j4NWnZgB36aRft",
-                         host = "workindia-redshift-cluster-v2.c4n7phkfcstn.us-east-1.redshift.amazonaws.com",
-                         port = "5439",
-                         database = "workindia"
+conn2_ = psycopg2.connect(user = user_, 
+                         password = password_,
+                         host = host_,
+                         port = port_,
+                         database = databse_
                         )
 x1 = conn2.cursor()
 
